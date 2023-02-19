@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
 
 function App() {
+  const [state, setState] = useState('all');
+  const [added, setAdded] = useState(false);
+  const [bgColor, setbgColor] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='todo' style={{'backgroundColor':bgColor ? 'aqua' : 'darkblue'}}>
+        <Header setState={setState} bgColor={bgColor} setbgColor={setbgColor}/>
+        <Main state={state} addedState={added} setAdded={setAdded}/>
+        <Footer addedState={added} setAdded={setAdded}/>
+      </div>
     </div>
   );
 }
