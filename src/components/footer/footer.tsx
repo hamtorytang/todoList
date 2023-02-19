@@ -1,60 +1,43 @@
 import React, { useEffect, useState } from "react";
+import { ItemProps } from '../../interface/item';
 
 interface FooterProps{
-    addedState: boolean;
-    setAdded: React.Dispatch<React.SetStateAction<boolean>>;
+    addItem: (item:ItemProps)=>void;
 }
 
-interface ContentProps{
-    key: string;
-    text: string;
-    state: string;
-}
 
 const generateKey = () => {
-    return new Date().getTime();
+    return new Date().getTime().toString();
 }
-export default function Footer({addedState, setAdded}:FooterProps){
+export default function Footer({addItem}:FooterProps){
 
-    const [content, setContent] = useState<ContentProps>({key:'',text:'', state:'active'});
-    const [key, setKey] = useState<string>('');
+    const [content, setContent] = useState<ItemProps>({key:'',text:'', state:'active'});
 
-    useEffect(()=>{
-        setKey(generateKey().toString());
-    },[]);
-    useEffect(()=>{
-        setKey(generateKey().toString());
-    },[addedState]);
-
-    const enterContent = ()=>{
+    const enterContent = (e:React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault();
         if(content.text.trim().length !== 0){
-            setAdded(!addedState);
-            window.localStorage.setItem(content.key,JSON.stringify({...content, text:content.text.trimStart()}));
-            setContent({key:'', text:'', state:'active'});
+            addItem(content);
+            setContent({key:'',text:'', state:'active'});
         }else{
             alert('write something');
         }
     }
     
     return (
-        <footer className='App--footer'>
-            <textarea 
+        <form className='App--footer'
+        onSubmit={enterContent}
+        >
+            <input
+            type='text'
+            placeholder='Add Todo'
             onChange={(event)=>{
-                setContent({key: key, text: event.target.value, state:'active'});
-            }}
-            onKeyDown={(event)=>{
-                if(event.code === 'Enter'){
-                    event.preventDefault();
-                    enterContent();
-                }
+                setContent({key: generateKey(), text: event.target.value, state:'active'});
             }}
             value={content.text}
             />
-            <button className='add-button' onClick={()=>{
-                    enterContent();
-                }}>
+            <button className='add-button'>
                 Add
             </button>
-        </footer>
+        </form>
     )
 }

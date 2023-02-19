@@ -86,7 +86,7 @@ ul li input{
   align-items: center;
 }
 
-.App--footer textarea{
+.App--footer input{
   flex-basis: 380px;
   height:40px;
 }
