@@ -1,0 +1,25 @@
+
+.container{
+list-style-type:none;
+flex-basis: 340px;
+color:white;
+padding:20px;
+overflow-y: scroll;
+}
+.list{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin:10px;
+}
+.input{
+margin-right: 10px;
+}
+
+.button{
+transition: all 200ms linear;
+}
+.button:hover{
+transform: scale(1.2) rotate(45deg);
+color:var(--color-accent);
+}

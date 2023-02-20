@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ItemProps } from '../../interface/item';
-
+import styles from './footer.module.css'
 interface FooterProps{
     addItem: (item:ItemProps)=>void;
 }
@@ -24,10 +24,11 @@ export default function Footer({addItem}:FooterProps){
     }
     
     return (
-        <form className='App--footer'
+        <form className={styles.footer}
         onSubmit={enterContent}
         >
             <input
+            className={styles.input}
             type='text'
             placeholder='Add Todo'
             onChange={(event)=>{
@@ -35,7 +36,7 @@ export default function Footer({addItem}:FooterProps){
             }}
             value={content.text}
             />
-            <button className='add-button'>
+            <button className={styles.button}>
                 Add
             </button>
         </form>

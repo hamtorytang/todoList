@@ -1,0 +1,31 @@
+
+.header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-basis: 80px;
+}
+
+.container button{
+margin:10px;
+border:none;
+color:var(--color-text);
+background-color: var(--color-bg);
+}
+
+.container button:hover{
+transform: scale(1.2) rotate(10deg);
+color:var(--color-accent);
+}
+
+.container .selected{
+border-bottom: 1px solid white;
+}
+
+.button{
+margin:10px;
+border:none;
+color:var(--color-text);
+background-color: var(--color-bg);
+margin-left: 20px;
+}

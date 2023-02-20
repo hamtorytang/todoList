@@ -1,3 +1,17 @@
+:root {
+  --font-size : 10px;
+  --color-bg: #090979;
+  --color-text: #fefeff;
+  --color-accent: red;
+}
+
+html.dark{
+  --font-size : 10px;
+  --color-bg: #ffa400;
+  --color-text: #c200ff;
+  --color-accent: red;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +20,7 @@
 .App{
   height: 100vh;
   width: 100vw;
-  background-color: darkgray;
+  background-color: #00d4ff;
 }
 
 .todo{
@@ -17,83 +31,7 @@
   top: 25%;
   width: 500px;
   height: 500px;
-  background-color: darkblue;
+  background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
-}
-
-.App--header{
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-basis: 80px;
-}
-
-.state--container button{
-  margin:10px;
-  border:none;
-  color:orange;
-  background-color: darkblue;
-}
-
-.state--container button:hover{
-  transform: scale(1.2) rotate(10deg);
-  color:aquamarine;
-}
-
-.state--container .selected{
-  border-bottom: 1px solid white;
-}
-
-.mode--button{
-  margin:10px;
-  border:none;
-  color:white;
-  background-color: darkblue;
-}
-
-ul{
-  list-style-type:none;
-  flex-basis: 340px;
-  color:white;
-  padding:20px;
-  overflow-y: scroll;
-}
-ul li{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin:10px;
-}
-ul li input{
-  margin-right: 10px;
-}
-
-.bin--button{
-  transition: all 200ms linear;
-}
-.bin--button:hover{
-  transform: scale(1.2) rotate(45deg);
-  color:red;
-}
-
-.App--footer{
-  flex-basis: 80px;
-  border:1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.App--footer input{
-  flex-basis: 380px;
-  height:40px;
-}
-
-.App--footer button{
-  flex-basis: 100px;
-  height:40px;
-  border: none;
-  background-color: orange;
 }

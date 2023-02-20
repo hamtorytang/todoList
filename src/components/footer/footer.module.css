@@ -1,0 +1,20 @@
+
+.footer{
+flex-basis: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.input{
+flex-basis: 380px;
+height:40px;
+border: none;
+}
+
+.button{
+flex-basis: 100px;
+height:40px;
+border: none;
+background-color: var(--color-accent);
+}
