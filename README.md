@@ -1,46 +1,12 @@
-# Getting Started with Create React App
+어떤 프레임워크나 라이브러리를 파악하고자할때 투두앱을 작성하는 것이 가장 빠르고 직관적으로 그것의 이해도를 높여준다고 생각된다. 
+그 이유는 간단한 기능안에 여러가지 요소를 실험해볼 수 있기때문이다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+해당 파일은 크게 3가지 View Component 로 나뉜다
+* Header
+** 투둡앱의 윗부분을 담당하는 뷰로, 다크모드나 목록의 상태를 전환하는 버튼을 다룬다
 
-## Available Scripts
+* Main 
+** 다크모드의 적용이나 Header 의 목록의 상태를 전환하는 버튼에 의존하여 그 목록을 렌더링한다
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Footer
+** 투두앱의 목록을 생성하는 곳으로 글자를 입력하는 부분과 해당 내용을 목록에 추가하는 버튼으로 나뉜다
