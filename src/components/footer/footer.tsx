@@ -30,7 +30,7 @@ export default function Footer({addItem}:FooterProps){
             <input
             className={styles.input}
             type='text'
-            placeholder='Add Todo'
+            placeholder='  Add Todo'
             onChange={(event)=>{
                 setContent({key: generateKey(), text: event.target.value, state:'active'});
             }}

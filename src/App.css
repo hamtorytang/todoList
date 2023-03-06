@@ -21,14 +21,15 @@ html.dark{
   height: 100vh;
   width: 100vw;
   background-color: #00d4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo{
   position: relative;
   border: 1px solid black;
   text-align: center;
-  left: 35%;
-  top: 25%;
   width: 500px;
   height: 500px;
   background-color: var(--color-bg);
